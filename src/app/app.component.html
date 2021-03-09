@@ -1,0 +1,43 @@
+<div *ngIf="loader" class="spinner-border"></div>
+
+
+<!----FOR DESKTOP---->
+
+<div>
+  <div class="container">
+
+    <div class="panel panel-primary" style="height: 199px;background-color: hsl(257, 27%, 26%);">
+      <div class="panel-heading" style="background-color: hsl(260, 8%, 14%);">Url Shorten</div>
+      <div class="panel-body">
+        <input type="text" class="form-control" (keyup)="inputchange($event)" id="validationCustom03" required
+          aria-describedby="emailHelp" [(ngModel)]="urlvalue" placeholder="Enter Url">
+        <br>
+        <font *ngIf='validate' style="color: red;">
+          {{msg }}
+        </font>
+      </div>
+      <div style="text-align: center;">
+        <button type="submit" class="btn btn-primary" style="background-color: hsl(180, 66%, 49%);"
+          (click)="FormSubmit()">Sorten It</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <ul class="list-group list-group-flush" *ngFor="let item of shortenlink let odd=odd;">
+      <li class="list-group-item">
+        <strong>
+          {{item.name}}
+        </strong>
+        <strong style="float: right;color: hsl(180, 66%, 49%);">
+          {{item.shortenurl}}
+        </strong>
+        <div style="text-align: center;">
+          <button class="btn btn-primary" [cbContent]="item.shortenurl" ngxClipboard
+            title="Click Here to Copy Shorten Url">Copy</button>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
