@@ -1,0 +1,223 @@
+<div *ngIf="loader" class="spinner-border"></div>
+
+<br>
+<br>
+
+<p-panel *ngIf='ShowBaselineData'>
+    <div class="ui-g-12" style="float: revert;height: 374px;">
+        <div class="ui-g-5" style="border-style: none;margin-left: 167px;width: 525px;float: revert;">
+            <strong style="font-size: 55px;">
+                More Than Just Shorter Links
+            </strong>
+            <br>
+            <p style="font-size: 22px;">
+                Build your brand's recognition and get detailed insights on how your links are performing
+            </p>
+            <br>
+            <span class=" ui-panelmenu ">
+                <span class="ui-panelmenu-header ui-state-active"
+                    style="background: none;border: none;    font-size: 20px;">
+                    <a class="chipsCSS">Get Started</a>
+                </span></span>
+
+
+        </div>
+        <img style="width: 63px;" src="./../assets/offc.jpg"
+            style="width: 247px;margin-top: -258px;margin-left: 861px;">
+        <!-- <div class="ui-g-3">
+            <img style="width: 63px;" src="./../assets/offc.jpg">
+        </div> -->
+    </div>
+
+</p-panel>
+<!----FOR DESKTOP---->
+<div style="background-color: #f3f0f0;">
+    <div>
+        <div class="container" style="top: -33px;position: relative;">
+
+            <div class="panel panel-primary"
+                style="height: 199px;background-color: hsl(257, 27%, 26%);border-radius: 10px;">
+                <div class=" panel-heading" style="background-color: hsl(260, 8%, 14%);">Url Shorten</div>
+                <div class="panel-body">
+                    <input type="text" class="form-control" (keyup)="inputchange($event)" id="validationCustom03"
+                        required aria-describedby="emailHelp" [(ngModel)]="urlvalue" placeholder="Enter Url">
+                    <br>
+                    <font *ngIf='validate' style="color: red;">
+                        {{msg }}
+                    </font>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-primary" style="background-color: hsl(180, 66%, 49%);"
+                        (click)="FormSubmit()">Sorten It</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <p-panel *ngIf='ShowBaselineData'>
+            <div class="card">
+                <ul class="list-group list-group-flush" *ngFor="let item of shortenlink let odd=odd;">
+                    <li class="list-group-item">
+                        <strong>
+                            {{item.name}}
+                        </strong>
+                        <strong style="float: right;color: hsl(180, 66%, 49%);">
+                            {{item.shortenurl}}
+                        </strong>
+                        <div style="text-align: center;">
+                            <button class="btn btn-primary" [cbContent]="item.shortenurl" ngxClipboard
+                                title="Click Here to Copy Shorten Url">Copy</button>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </p-panel>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div style="text-align: center;">
+        <h2 style="font-family: system-ui;">
+            Advanced Statistics
+        </h2>
+        <br>
+        <p style="font-weight: 600;font-family: system-ui;font-size: 14px;">
+            Track how links are performing across the web with our advanced statistics dashboard
+        </p>
+    </div>
+
+    <br>
+    <p-accordion *ngIf="ShowBaselineData">
+        <div class="ui-g-12" style="margin-left: 170px;text-align: center;">
+            <p-card *ngIf="ShowBaselineData" [style]="{width: '302px',height:'138px','border-style': 'none'}">
+                <h4>Brand Recognition</h4>
+                <div class="card-body">
+                    Boost Your brand Recognition with each Generic links dont mean a thing Branded links helps instill
+                    confidence in
+                    yout content
+                </div>
+            </p-card>
+
+            <p-card class="p-card-1" *ngIf="ShowBaselineData"
+                [style]="{'margin-left': '337px',height:'138px','margin-top':'-155px','border-style': 'none'}">
+                <h4>Detailed Records</h4>
+                <div class="card-body">
+                    Boost Your brand Recognition with each Generic links dont mean a thing Branded links helps instill
+                    confidence in
+                    yout content
+                </div>
+            </p-card>
+
+            <p-card *ngIf="ShowBaselineData"
+                [style]="{'margin-left': '689px',height:'138px','margin-top':'-138px','border-style': 'none'}">>
+                <h4>Fully Customizable</h4>
+                <div class="card-body">
+                    Boost Your brand Recognition with each Generic links dont mean a thing Branded links helps instill
+                    confidence in
+                    yout content
+                </div>
+            </p-card>
+        </div>
+    </p-accordion>
+</div>
+
+<!-- <div class="ui-g-12" style="background-color: #f3f0f0;">
+
+        <div class="card ui-g-3">
+
+            <h4>Brand Recognition</h4>
+            <div class="card-body">
+                Boost Your brand Recognition with each Generic links dont mean a thing Branded links helps instill
+                confidence in
+                yout content
+            </div>
+            <hr>
+        </div>
+        <div class="card ui-g-3">
+            <h4>Brand Recognition</h4>
+            <div class="card-body">
+                Boost Your brand Recognition with each Generic links dont mean a thing Branded links helps instill
+                confidence in
+                yout content
+            </div>
+        </div>A
+        <hr>
+        <div class="card ui-g-3">
+            <h4>Brand Recognition</h4>
+            <div class="card-body">
+                Boost Your brand Recognition with each Generic links dont mean a thing Branded links helps instill
+                confidence in
+                yout content
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+
+
+<div class="ui-g-12">
+    <div class="ui-g-12" style="text-align: center;background-color: rgb(59, 48, 84);height: 13rem;">
+        <br>
+        <br>
+        <h6 style="color: white;font-size: 27px;">Boost Your Links Today</h6>
+        <br>
+        <span class=" ui-panelmenu ">
+            <span class="ui-panelmenu-header ui-state-active"
+                style="background: none;border: none;    font-size: 20px;">
+                <a class="chipsCSS">Get Started</a>
+            </span></span>
+
+    </div>
+
+
+    <div class="ui-g-12" style="background-color: black;color: white;">
+        <div>
+            <strong class="fontsize"
+                style="margin-left: 241px;position: relative;top: 38px;font-size: 29px;">Shortly</strong>
+        </div>
+        <div style="margin-left: 712px;">
+            <ul style="list-style-type:none ;font-weight:bold" class="ui-g-3">
+                <li>
+                    <h6>Features</h6>
+                </li>
+                <br>
+                <li class="paddingg">Link Shortening</li>
+                <li class="paddingg">Bordered Links</li>
+                <li class="paddingg">Analytics</li>
+
+            </ul>
+
+            <ul style="list-style-type:none ;font-weight:bold" class="ui-g-3">
+                <li>
+                    <h6>Resources</h6>
+                </li>
+                <br>
+                <li class="paddingg">Blog</li>
+                <li class="paddingg">Developers</li>
+                <li class="paddingg">Support</li>
+
+            </ul>
+
+            <ul style="list-style-type:none ;font-weight:bold;" class="ui-g-3">
+                <li>
+                    <h6>Company</h6>
+                </li>
+                <br>
+                <li class="paddingg">About</li>
+                <li class="paddingg">Our Team</li>
+                <li class="paddingg">Carrers</li>
+                <li class="paddingg">Contact</li>
+
+            </ul>
+        </div>
+
+        <i class="fa fa-facebook-square fontsize" aria-hidden="true"></i>&nbsp;
+        <i class="fa fa-twitter fontsize" aria-hidden="true"></i>&nbsp;
+        <i class="fa fa-pinterest fontsize" aria-hidden="true"></i>&nbsp;
+        <i class="fa fa-instagram fontsize" aria-hidden="true"></i>
+    </div>
+</div>

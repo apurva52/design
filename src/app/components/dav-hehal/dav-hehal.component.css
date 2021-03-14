@@ -1,0 +1,36 @@
+.chipsCSS {
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+    display: inline-flex;
+    padding: 18px 20px;
+    border-radius: 16px;
+    align-items: center;
+    cursor: default;
+    min-height: 16px;
+    background-color: hsl(180, 66%, 49%) !important;
+    height: 1px;
+}
+
+:host>>>.ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem a {
+
+  font-size: 15px;
+
+}
+
+:host>>>.ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem
+{
+  border: none;
+      background: none;
+          color: #555555;
+}
+
+:host>>>.ui-tabmenu .ui-tabmenu-nav>li.ui-state-default.ui-state-active{
+  font-weight: bolder;
+}
+ .paddingg{
+padding: 1px  0px 7px;
+ }
+ .fontsize{
+   font-size: 21px;
+ }
+
+ 

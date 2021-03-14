@@ -1,0 +1,49 @@
+.chipsCSS {
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+    display: inline-flex;
+    padding: 18px 20px;
+    border-radius: 16px;
+    align-items: center;
+    cursor: default;
+    min-height: 16px;
+    background-color: hsl(180, 66%, 49%) !important;
+    height: 1px;
+}
+
+paddingg{
+padding: 1px  0px 7px;
+ }
+ .fontsize{
+   font-size: 21px;
+ }
+
+ .column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+:host>>>.ui-card-body {
+    height: 138px;
+    width: 302px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: rgb(153 153 153) -1px 3px 6px 6px;
+}
+
+:host>>>.p-card-1{
+  margin-top: -137px;
+    margin-left: 337px;
+    border-style: none;
+}

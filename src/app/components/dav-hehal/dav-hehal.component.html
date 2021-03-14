@@ -1,0 +1,18 @@
+<div *ngIf="loader" class="spinner-border"></div>
+<div class="ui-grid-row">
+    <p-tabMenu [model]="items" *ngIf='ShowBaselineData' [activeItem]="items[0]"
+        [style]="{'width':'926px','float':'left'}">
+
+    </p-tabMenu>
+    <div style="float: right;">
+        <button type="submit" class="btn btn-primary" style="background-color: white;color: black;border-color: white;"
+            (click)="FormSubmit()">Login</button>&nbsp;
+
+        <span class=" ui-panelmenu ">
+            <span class="ui-panelmenu-header ui-state-active" style="background: none;border: none;">
+                <a class="chipsCSS">Sign Up</a>
+            </span></span>
+    </div>
+</div>
+
+<router-outlet *ngIf="routing"></router-outlet>
